@@ -4,6 +4,7 @@ import main.java.InsertionSort;
 import main.java.MergeSort;
 import main.java.QuickSort;
 import main.java.SelectionSort;
+import main.java.ShellSort;
 import main.java.util.SortObj;
 import main.java.util.Utils;
 import org.junit.BeforeClass;
@@ -43,6 +44,33 @@ public class SortTest {
     }
 
     @Test
+    public void testShellSortInt() {
+        printArray(array);
+
+        int[] arrayMine = array.clone();
+        ShellSort.sort(arrayMine);
+
+        printArray(arraySorted);
+        printArray(arrayMine);
+
+        assertArrayEquals(arraySorted, arrayMine);
+    }
+
+    @Test
+    public void testShellSortObj() {
+        printArray(arrayObj);
+
+        SortObj[] arrayMine = arrayObj.clone();
+        ShellSort.sort(arrayMine);
+
+        printArray(arrayObjSorted);
+        printArray(arrayMine);
+
+        assertArrayEquals(arrayObjSorted, arrayMine);
+    }
+
+    @Test
+    @Ignore
     public void testInsertionSortInt() {
         printArray(array);
 
@@ -56,6 +84,7 @@ public class SortTest {
     }
 
     @Test
+    @Ignore
     public void testInsertionSortObj() {
         printArray(arrayObj);
 

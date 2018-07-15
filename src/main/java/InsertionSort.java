@@ -2,8 +2,6 @@ package main.java;
 
 import main.java.util.Utils;
 
-import javax.rmi.CORBA.Util;
-
 public class InsertionSort {
 
     public static void sort(int[] array) {
