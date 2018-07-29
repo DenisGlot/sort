@@ -44,6 +44,33 @@ public class SortTest {
     }
 
     @Test
+    public void testQuickSortSecondInt() {
+        printArray(array);
+
+        int[] arrayMine = array.clone();
+        QuickSort.sortSecond(arrayMine);
+
+        printArray(arraySorted);
+        printArray(arrayMine);
+
+        assertArrayEquals(arraySorted, arrayMine);
+    }
+
+    @Test
+    public void testQuickSortSecondObj() {
+        printArray(arrayObj);
+
+        SortObj[] arrayMine = arrayObj.clone();
+        QuickSort.sortSecond(arrayMine);
+
+        printArray(arrayObjSorted);
+        printArray(arrayMine);
+
+        assertArrayEquals(arrayObjSorted, arrayMine);
+    }
+
+    @Test
+    @Ignore
     public void testShellSortInt() {
         printArray(array);
 
@@ -57,6 +84,7 @@ public class SortTest {
     }
 
     @Test
+    @Ignore
     public void testShellSortObj() {
         printArray(arrayObj);
 
@@ -132,7 +160,7 @@ public class SortTest {
         printArray(array);
 
         int[] arrayMine = array.clone();
-        QuickSort.sort(arrayMine);
+        QuickSort.sortFirst(arrayMine);
 
         printArray(arraySorted);
         printArray(arrayMine);
@@ -146,7 +174,7 @@ public class SortTest {
         printArray(arrayObj);
 
         SortObj[] arrayMine = arrayObj.clone();
-        QuickSort.sort(arrayMine);
+        QuickSort.sortFirst(arrayMine);
 
         printArray(arrayObjSorted);
         printArray(arrayMine);
